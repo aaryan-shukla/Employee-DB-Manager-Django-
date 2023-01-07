@@ -1,0 +1,72 @@
+:root {
+    --bg: #2373eb;
+    --color: rgb(11, 5, 5);
+    --tempcolor: rgb(66, 110, 146);
+    --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+}
+body{
+    background-color:beige;
+}
+.container{
+    margin-top: 50px;
+    height: 92px;
+    width: 1000px;
+    column-count: 4;
+}
+.header{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: bold;
+    color:aliceblue;
+    margin-top: 50px;
+    text-align: center;
+    background-color:cornflowerblue;
+    width: 500px;
+    margin-left:auto;
+    margin-right: auto;
+    border:0px solid black; 
+    border-radius:4px ;
+}
+.btn {
+    display: inline-block;
+    text-align: center;
+    background: var(--bg);
+    color: var(--color);
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 5px;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size:medium;
+}
+.btn:before,
+.btn:after {
+    width: 4.4em;
+    height: 2.95em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background:var(--tempcolor);
+    border-radius: 50%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.btn:before {
+    top: -25%;
+    left: 20%;
+}
+
+.btn:after {
+    bottom: -25%;
+    right: 20%;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+    transform: none;
+}
+
